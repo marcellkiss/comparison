@@ -1,3 +1,20 @@
+<div class="row">
+  <div class="cell">Device</div>
+  <div class="cell" *ngFor="let attribute of data.attributes; let i = index;">
+    {{ attribute }}
+    <br/>
+    <input type="text" [(ngModel)]="preference[i]"/>
+  </div>
+  <div class="cell">Result</div>
+</div>
+<div class="row" *ngFor="let device of data.devices">
+  <div class="cell">{{ device.title }}</div>
+  <div class="cell" *ngFor="let attribute of device.attributes; let i = index;">
+    {{ attribute.rating }}
+  </div>
+  <div class="cell">{{ getResult(device) }}</div>
+</div>
+
 <h1>
   {{title}}
 </h1>

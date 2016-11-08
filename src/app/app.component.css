@@ -1,0 +1,13 @@
+.row {
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.cell {
+    display: table-cell;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+}
